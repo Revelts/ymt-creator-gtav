@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>YMTPack.Core</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Same CodeWalker build YMTEditor ships (netstandard2.0, sha256 0a081396...d18b).
+         Its ped YMT field names (hash_2FD08CEF, ...) match what YMTEditor writes. -->
+    <Reference Include="CodeWalker.Core">
+      <HintPath>..\..\..\packages\CodeWalker.Core.dll</HintPath>
+    </Reference>
+    <!-- The shipped SharpDX.Mathematics.dll targets .NET Framework 4.5; use the netstandard NuGet build instead. -->
+    <PackageReference Include="SharpDX.Mathematics" Version="4.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="YMTPack.Tests" />
+  </ItemGroup>
+
+</Project>

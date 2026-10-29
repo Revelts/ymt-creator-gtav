@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/YMTPack.Cli/YMTPack.Cli.csproj" />
+    <Project Path="src/YMTPack.Core/YMTPack.Core.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/YMTPack.Tests/YMTPack.Tests.csproj" />
+  </Folder>
+</Solution>
