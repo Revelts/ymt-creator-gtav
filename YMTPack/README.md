@@ -3,9 +3,14 @@
 macOS/Linux command-line tool that turns a folder of GTA V addon clothing
 (any mix of packs) into a ready FiveM resource with a freshly generated `.ymt`.
 
-It reuses `../packages/CodeWalker.Core.dll`, the same build YMTEditor ships,
-for the binary `.ymt` encoding. That DLL targets .NET Standard 2.0, so it runs
-on .NET 10 on macOS and Linux.
+It uses `lib/CodeWalker.Core.dll` for the binary `.ymt` encoding. This is the
+build that YMTEditor shipped (sha256 `0a081396…d18b`). It targets .NET
+Standard 2.0, so it runs on .NET 10 on macOS and Linux.
+
+Do not replace it with a newer CodeWalker. Newer builds name the ped YMT fields
+differently, for example `pedXml_audioID` instead of `hash_2FD08CEF`, and
+`YmtXmlBuilder` writes the old names. CodeWalker's copyright notice is in
+`lib/CodeWalker.Notice.txt`.
 
 ## Build
 

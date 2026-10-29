@@ -8,10 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <!-- Same CodeWalker build YMTEditor ships (netstandard2.0, sha256 0a081396...d18b).
-         Its ped YMT field names (hash_2FD08CEF, ...) match what YMTEditor writes. -->
+    <!-- Pinned CodeWalker build from YMTEditor (netstandard2.0, sha256 0a081396...d18b).
+         Keep this exact build: its ped YMT field names (hash_2FD08CEF, ...) are what
+         YmtXmlBuilder writes; newer CodeWalker names them differently. -->
     <Reference Include="CodeWalker.Core">
-      <HintPath>..\..\..\packages\CodeWalker.Core.dll</HintPath>
+      <HintPath>..\..\lib\CodeWalker.Core.dll</HintPath>
     </Reference>
     <!-- The shipped SharpDX.Mathematics.dll targets .NET Framework 4.5; use the netstandard NuGet build instead. -->
     <PackageReference Include="SharpDX.Mathematics" Version="4.2.0" />
